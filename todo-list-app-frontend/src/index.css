@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.dark {
+  background: #0b1b2b;
+  color: white;
+}
+
+.light {
+  background: #f4f7fb;
+  color: #102033;
+}

@@ -1,0 +1,33 @@
+.dashboard-headbar{
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.dashboardHomePage-h {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.date-left {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+/* Time */
+.time-right {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+    font-family: "Courier New", monospace;
+}
+
+.light .dashboardHomePage-h,
+.light .date-left {
+    color: #102033;
+}
+
+.light .time-right {
+    color: #0b57d0;
+}

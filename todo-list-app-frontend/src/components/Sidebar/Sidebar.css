@@ -1,0 +1,143 @@
+/* Sidebar container */
+.sidebar {
+    height: auto;
+    width: auto;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Home Button */
+.sidebar-home-btn {
+    width: 10vw;
+    margin: 20px 20px 20px 0;
+    background: #15171b;
+    box-shadow: 0 8px 20px #120101;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px;
+    transition: 0.3s ease;
+
+}
+
+.sidebar-home-btn:hover {
+    background: #152331;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px #00000080;
+}
+
+/* List */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    padding: 20px 0 30px 30px;
+    font-size: 20px;
+
+}
+
+.sidebar li:hover {
+
+    color: #f9ee1f;
+}
+
+/* NAV LINK */
+.nav-item {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.nav-item:hover {
+    color: #f9ee1f;
+}
+
+/* ACTIVE LINK */
+.nav-item.active {
+    color: #f9ee1f;
+    font-weight: 600;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+/* ▶ Closed */
+.dropdown::after {
+    content: "\25B6";
+    position: absolute;
+    right: 4px;
+    transition: 0.3s;
+}
+
+/* ▼ Open */
+.dropdown.active::after {
+    content: "\25BC";
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    margin-left: 30px;
+}
+
+.dropdown-menu li {
+    padding: 0 0 18px 50px;
+    font-size: 17px;
+}
+
+/* Dropdown title */
+.dropdown-title {
+    color: white;
+    display: block;
+}
+
+/* Hover dropdown title */
+.dropdown-title:hover {
+    color: #f9ee1f;
+}
+
+.light .sidebar {
+    background-color: #cbc9c9;
+    color: #102033;
+    border-right: 1px solid #d3deec;
+    box-shadow: 2px 0 12px rgba(16, 32, 51, 0.12);
+}
+
+.light .nav-item {
+    color: #102033;
+}
+
+.light .sidebar li {
+    color: #102033;
+}
+
+.light .sidebar li:hover,
+.light .nav-item:hover,
+.light .nav-item.active {
+    color: #0b57d0;
+}
+
+.light .sidebar-home-btn,
+.light .theme-toggle-btn {
+    background: #0d2a68;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(2, 4, 9, 0.833);
+    transition: 0.3s ease;
+}
+
+.light .sidebar-home-btn:hover,
+.light .theme-toggle-btn:hover {
+    background: #0a2145;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(2, 4, 9, 0.833);
+}

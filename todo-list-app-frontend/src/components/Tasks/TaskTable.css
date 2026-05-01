@@ -1,0 +1,171 @@
+.task-search-area {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0 15px;
+}
+
+.task-table {
+  width: 100%;
+}
+
+.task-table-head,
+.task-table-row {
+  display: grid;
+  grid-template-columns: 60px 1.1fr 1.3fr 0.9fr 1.7fr 0.9fr 1fr 1.45fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.task-table-no-actions {
+  grid-template-columns: 60px 1.1fr 1.3fr 0.9fr 1.7fr 0.9fr 1fr;
+}
+
+.task-table-head {
+  border: 1px solid #3a4a6a;
+  border-radius: 8px;
+  padding: 13px;
+  color: #cfe1ff;
+  font-weight: 700;
+}
+
+.task-table-row {
+  margin-top: 4px;
+  padding: 13px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #2d3e5f;
+  color: #dce8f8;
+  cursor: pointer;
+}
+
+.task-table-row:hover {
+  background: #0b1220;
+}
+
+.start-end-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.25;
+}
+
+.table-btns {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.table-btns button,
+.popup-exit-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 9px;
+  color: white;
+  background: #315ce8;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.delete-table-btn {
+  background: #b32424;
+}
+
+.complete-table-btn {
+  background: green;
+}
+
+.completed-table-text {
+  background: #0f7a3a;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.task-popup-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.task-popup {
+  width: 430px;
+  max-width: 90vw;
+  background: #192335;
+  color: #f8fafc;
+  border: 1px solid #3a4a6a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.task-popup h2 {
+  margin-bottom: 12px;
+}
+
+.task-popup p {
+  margin: 8px 0;
+}
+
+.popup-exit-btn {
+  margin-top: 15px;
+  background: #3b5bdb;
+}
+
+.dark .edit-table-btn {
+  background: #2563eb;
+}
+
+.dark .delete-table-btn {
+  background: #c52222;
+}
+
+.dark .complete-table-btn {
+  background: #16803a;
+}
+
+.light .task-table-head {
+  background: #d2d6dc;
+  border-color: #b7c5da;
+  color: #102033;
+}
+
+.light .task-table-row {
+  background: #dedddd;
+  color: #102033;
+  border-bottom-color: #d4ddec;
+}
+
+.light .task-table-row:hover {
+  background: #eef5ff;
+}
+
+.light .task-popup {
+  background: #ffffff;
+  color: #102033;
+  border-color: #b7c5da;
+  box-shadow: 0 18px 50px rgba(16, 32, 51, 0.25);
+}
+
+.light .edit-table-btn {
+  background: #2563eb;
+}
+
+.light .delete-table-btn {
+  background: #c52222;
+}
+
+.light .complete-table-btn {
+  background: #16803a;
+}
+
+.light .completed-table-text {
+  background: #dff8e8;
+  color: #0f6b34;
+  border: 1px solid #77c894;
+}

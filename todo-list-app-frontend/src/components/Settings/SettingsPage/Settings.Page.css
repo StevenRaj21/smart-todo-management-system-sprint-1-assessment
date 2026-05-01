@@ -1,0 +1,79 @@
+.settings-page {
+  width: 100%;
+}
+
+.settings-box {
+  margin-top: 30px;
+  border: 1px solid #3a4a6a;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 20px rgba(5, 6, 7, 0.726);
+}
+
+.settings-box h2 {
+  margin-bottom: 10px;
+}
+
+.settings-box p {
+  color: #c6d7ed;
+  font-size: 18px;
+}
+
+.theme-toggle-btn {
+  min-width: 170px;
+  background: #1b2940;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  padding: 16px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #120101;
+  transition: 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: #152331;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px #00000080;
+}
+
+.dark .settings-page .theme-toggle-btn {
+  background: #3663ac;
+  color: #ffffff;
+  box-shadow: 0 8px 20px #120101;
+  transition: 0.3s ease;
+}
+
+.dark .settings-page .theme-toggle-btn:hover {
+  background: #152331;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px #00000080;
+}
+
+.light .settings-box {
+  border-color: #b7c5da;
+  background: #d0cece;
+  box-shadow: 0 8px 20px rgba(5, 6, 7, 0.726);
+}
+
+.light .settings-box p {
+  color: #31445b;
+}
+
+.light .settings-page .theme-toggle-btn {
+  background: #0d2a68;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(2, 4, 9, 0.833);
+  transition: 0.3s ease;
+}
+
+.light .settings-page .theme-toggle-btn:hover {
+  background: #0a2145;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(2, 4, 9, 0.833);
+}

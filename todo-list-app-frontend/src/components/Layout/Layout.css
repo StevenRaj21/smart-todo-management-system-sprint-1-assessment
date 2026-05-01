@@ -1,0 +1,43 @@
+.app-layout {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    background: linear-gradient(to right, #000000, #152331);
+}
+
+.light .app-layout {
+    background: #a1b4ce;
+}
+
+/* Right side content */
+.app-layout-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER FIX */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
+}
+
+.light .dashboard-header {
+    color: #102033;
+}
+
+
+/* Left date */
+.date-left {
+    font-size: 20px;
+}
+
+/* Right time */
+.time-right {
+    font-size: 20px;
+    font-weight: bold;
+}
