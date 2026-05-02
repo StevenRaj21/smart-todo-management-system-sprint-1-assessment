@@ -31,3 +31,28 @@
 .light .time-right {
     color: #0b57d0;
 }
+
+@media (max-width: 900px) {
+    .dashboard-headbar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-headbar {
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .dashboardHomePage-h {
+        font-size: 26px;
+    }
+
+    .date-left {
+        font-size: 15px;
+    }
+
+    .time-right {
+        font-size: 18px;
+    }
+}

@@ -99,3 +99,34 @@
 .light .empty-text {
   color: #52677f;
 }
+
+@media (max-width: 700px) {
+  .card-row {
+    gap: 12px;
+  }
+
+  .summary-card {
+    width: calc(50% - 6px);
+    height: 105px;
+    padding: 10px;
+  }
+
+  .summary-card h4 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .summary-card span {
+    font-size: 25px;
+  }
+
+  .recent-header h3 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 420px) {
+  .summary-card {
+    width: 100%;
+  }
+}

@@ -171,3 +171,54 @@ select {
 .light .input[type="time"]::-webkit-calendar-picker-indicator {
   filter: none;
 }
+
+@media (max-width: 700px) {
+  .page {
+    padding: 10px 0;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .header {
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input,
+  .textarea,
+  select {
+    font-size: 15px;
+  }
+
+  .row,
+  .date-time-input {
+    gap: 8px;
+  }
+
+  .col,
+  .box {
+    min-width: 100%;
+  }
+
+  .small {
+    width: 100%;
+  }
+
+  .center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
