@@ -3,22 +3,26 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    background-color: #5b3b29;
 }
 
 .home-card-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     gap: 40px;
     padding: 20px;
 }
 
 .home-card {
-    width: 580px;
-    height: 550px;
+    width: min(580px, calc(100% - 30px));
+    height: auto;
+    min-height: 550px;
     background: #B68058;
     box-shadow: 0 10px 40px rgb(0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -39,7 +43,7 @@
 }
 
 .home-card h1 {
-    font-size: 50px;
+    font-size: clamp(34px, 4vw, 50px);
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
     color: #150101;
@@ -47,12 +51,13 @@
 
 
 .home-card p {
-    font-size: 25px;
+    font-size: clamp(17px, 2.2vw, 25px);
     font-weight: 600;
     letter-spacing: 2px;
     line-height: 1.5;
     color: #0c0c0c;
     margin-bottom: 20px;
+    overflow-wrap: anywhere;
 }
 
 .features {
@@ -62,7 +67,7 @@
 }
 
 .features li {
-    font-size: 20px;
+    font-size: clamp(15px, 1.8vw, 20px);
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 1.5;
@@ -70,6 +75,7 @@
     margin: 10px 0;
     padding-left: 28px;
     position: relative;
+    overflow-wrap: anywhere;
 }
 
 .features li::before {
@@ -92,8 +98,10 @@
     box-shadow: 0px 4px 10px #0b0303;
     /* box-shadow: offsetX offsetY blur spread color; */
     color: white;
-    width: 12vw;
-    font-size: 20px;
+    width: auto;
+    min-width: 150px;
+    font-size: clamp(16px, 1.8vw, 20px);
+    white-space: normal;
 }
 
 .home-btn:hover {
@@ -112,7 +120,7 @@
     .home-card {
         width: 90vw;
         height: auto;
-        min-height: 480px;
+        min-height: 0;
         margin-right: 0;
     }
 

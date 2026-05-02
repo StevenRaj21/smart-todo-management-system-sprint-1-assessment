@@ -1,26 +1,33 @@
 .dashboard-headbar{
-    width: 85vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
 }
 
 
 .dashboardHomePage-h {
     color: #ffffff;
-    font-size: 36px;
+    font-size: clamp(24px, 3vw, 36px);
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .date-left {
-    font-size: 18px;
+    font-size: clamp(14px, 1.6vw, 18px);
     color: #cbd5e1;
+    overflow-wrap: anywhere;
 }
 
 /* Time */
 .time-right {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: bold;
     color: #38bdf8;
     font-family: "Courier New", monospace;
+    overflow-wrap: anywhere;
 }
 
 .light .dashboardHomePage-h,

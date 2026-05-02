@@ -3,6 +3,7 @@
   gap: 27px;
   margin-top: 20px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .summary-card {
@@ -11,7 +12,9 @@
   border-radius: 12px;
   border: 1px solid #3a4a6a;
   width: 170px;
-  height: 120px;
+  min-height: 120px;
+  height: auto;
+  overflow: hidden;
   
 }
 
@@ -26,14 +29,16 @@
 
 .summary-card h4 {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
+  overflow-wrap: anywhere;
 }
 
 .DB-title-task-no{
     font-size: 15px;
+    overflow-wrap: anywhere;
 }
 .summary-card span {
-  font-size: 30px;
+  font-size: clamp(24px, 3vw, 30px);
   float: right;
 }
 
@@ -48,7 +53,8 @@
 }
 
 .recent-header h3{
-    font-size: 25px;
+    font-size: clamp(20px, 2.4vw, 25px);
+    overflow-wrap: anywhere;
 }
 
 .search-input {
@@ -59,6 +65,7 @@
   padding: 14px 18px;
   width: 220px;
   font-size: 12px;
+  max-width: 100%;
 }
 
 .empty-text {

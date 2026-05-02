@@ -6,18 +6,19 @@
 
 .task-table {
   width: 100%;
+  max-width: 100%;
 }
 
 .task-table-head,
 .task-table-row {
   display: grid;
-  grid-template-columns: 60px 1.1fr 1.3fr 0.9fr 1.7fr 0.9fr 1fr 1.45fr;
+  grid-template-columns: 50px minmax(90px, 1.1fr) minmax(120px, 1.3fr) minmax(90px, 0.9fr) minmax(140px, 1.7fr) minmax(80px, 0.9fr) minmax(90px, 1fr) minmax(170px, 1.45fr);
   column-gap: 10px;
   align-items: center;
 }
 
 .task-table-no-actions {
-  grid-template-columns: 60px 1.1fr 1.3fr 0.9fr 1.7fr 0.9fr 1fr;
+  grid-template-columns: 50px minmax(90px, 1.1fr) minmax(120px, 1.3fr) minmax(90px, 0.9fr) minmax(140px, 1.7fr) minmax(80px, 0.9fr) minmax(90px, 1fr);
 }
 
 .task-table-head {
@@ -35,6 +36,14 @@
   border-bottom: 1px solid #2d3e5f;
   color: #dce8f8;
   cursor: pointer;
+  min-width: 0;
+}
+
+.task-table-head span,
+.task-table-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .task-table-row:hover {
@@ -51,7 +60,7 @@
 .table-btns {
   display: flex;
   gap: 5px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -64,6 +73,7 @@
   background: #315ce8;
   cursor: pointer;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .delete-table-btn {
@@ -177,7 +187,7 @@
 
   .task-table-head,
   .task-table-row {
-    min-width: 950px;
+    min-width: 850px;
   }
 }
 
@@ -211,7 +221,8 @@
   }
 
   .task-table-row span {
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .start-end-text {

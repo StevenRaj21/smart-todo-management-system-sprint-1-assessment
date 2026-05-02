@@ -7,6 +7,8 @@
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgb(87, 87, 87);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* ---------- HEADER ---------- */
@@ -18,8 +20,9 @@
 }
 
 .title {
-  font-size: 22px;
+  font-size: clamp(19px, 2.3vw, 22px);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .task-id {
@@ -29,6 +32,7 @@
   border-radius: 20px;
   font-size: 15px;
   border: 1px solid #5978f4;
+  overflow-wrap: anywhere;
 }
 
 /* ---------- FORM ---------- */
@@ -51,6 +55,7 @@ select {
   background: #030507;
   color: #e2e8f0;
   font-size: 16px;
+  min-width: 0;
 }
 
 .textarea {
@@ -102,6 +107,7 @@ select {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -112,6 +118,7 @@ select {
   color: white;
   min-width: 120px;
   border: none;
+  white-space: normal;
 }
 
 .save { background: green; }

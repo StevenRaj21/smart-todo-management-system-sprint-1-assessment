@@ -6,14 +6,21 @@
 
 body {
   font-family: Roboto, Arial, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 .dark {
   background: #0b1b2b;
   color: white;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .light {
   background: #f4f7fb;
   color: #102033;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
