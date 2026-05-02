@@ -1,6 +1,10 @@
-const BASE_URL =
-  import.meta.env.VITE_API_URL ||
+const RENDER_API_URL =
   "https://smart-todo-management-system-sprint-1.onrender.com/api";
+
+const ENV_API_URL = import.meta.env.VITE_API_URL;
+
+const BASE_URL =
+  ENV_API_URL && ENV_API_URL.includes("/api") ? ENV_API_URL : RENDER_API_URL;
 
 const handleResponse = async (response, message) => {
   if (!response.ok) {
