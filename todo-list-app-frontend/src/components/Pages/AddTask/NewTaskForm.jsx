@@ -101,6 +101,7 @@ const NewTaskForm = ({ editTask, nextTaskId }) => {
       } else {
         await createTask(taskData);
         setFormData(emptyForm);
+        navigate("/dashboard");
       }
     } catch (error) {
       console.log("Error saving task:", error);

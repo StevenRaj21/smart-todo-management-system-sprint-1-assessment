@@ -1,10 +1,20 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://smart-todo-management-system-sprint-1.onrender.com/api";
+
+const handleResponse = async (response, message) => {
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || errorData.error || message);
+  }
+
+  return await response.json();
+};
 
 // GET TASKS
 export const getTasks = async () => {
   const response = await fetch(`${BASE_URL}/tasks`);
-  if (!response.ok) throw new Error("Failed to fetch tasks");
-  return await response.json();
+  return await handleResponse(response, "Failed to fetch tasks");
 };
 
 // CREATE TASK
@@ -15,8 +25,7 @@ export const createTask = async (taskData) => {
     body: JSON.stringify(taskData),
   });
 
-  if (!response.ok) throw new Error("Failed to create task");
-  return await response.json();
+  return await handleResponse(response, "Failed to create task");
 };
 
 // UPDATE TASK
@@ -27,8 +36,7 @@ export const updateTask = async (id, taskData) => {
     body: JSON.stringify(taskData),
   });
 
-  if (!response.ok) throw new Error("Failed to update task");
-  return await response.json();
+  return await handleResponse(response, "Failed to update task");
 };
 
 // DELETE TASK
@@ -37,6 +45,5 @@ export const deleteTask = async (id) => {
     method: "DELETE",
   });
 
-  if (!response.ok) throw new Error("Failed to delete task");
-  return await response.json();
+  return await handleResponse(response, "Failed to delete task");
 };
